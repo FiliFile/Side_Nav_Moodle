@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h2{
+    text-align: center;
+}
+
+h1{
+    margin-top: 15%;
+    color: darkred;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif ;
+}
+
+header { /*ganti shade warna ke arah lain*/
+    justify-content: space-between;
+    background: repeating-linear-gradient(
+        to left,
+        #240303, #3c0707 8.7%, 
+        hsl(0, 74%, 15%) 8.7%, #5a1111 18.1%,
+        #611212 18.1%, #6d1919 28.4%,
+        #811818 28.4%, #811818 40%, 
+        #8b1515 40%, #8d1515 50%, 
+        #9b1818 50%, #9b1818 60%, 
+        #a81919 60%, #c41818 70%, 
+        #c92323 70%, #c92323 80%, 
+        #d64545 80%, #ffe5e5 100%, 
+        white 85%, white 100%
+    );
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav a {
+    text-align: center;
+    padding: 15px 40px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover {
+    background-color: crimson;
+    transition: 0.5s;
+}
+
+.logo {
+    width: 100px;
+    margin-right: auto;
+    margin-left: 2%;
+}
+#logoo, #logooo{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    filter: 0.3 ease;
+}
+
+#logoo:active {
+    transform: scale(0.9);
+    filter:drop-shadow(0px 0px 5px black);
+}
+
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #3c0707;
+    color: white;
+    margin-top: 67px;
+    transition: 0.3s;
+}
+
+.sidebar a {
+    display: block;
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid crimson;
+    
+} /*waktu di click, anchor ke bagian di page home, gallery, etc*/
+
+.sidebar a:hover {
+    background-color: crimson;
+    transition: 0.7s;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+
+
+
+#bawahhome{
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    transition: max-height 0.4s ease-out;
+}
+#bawahhome.show {
+    max-height: 100px;
+}
+
+#bawahgallery{
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    transition: max-height 0.4s ease-out;
+}
+#bawahgallery.show {
+    max-height: 200px;
+}
+
+#bawahlearning{
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 20px;
+    transition: max-height 0.4s ease-out;
+}
+#bawahlearning.show {
+    max-height: 200px;
+}
